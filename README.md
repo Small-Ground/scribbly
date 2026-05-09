@@ -100,8 +100,8 @@ npm install
 cp .env.example .env
 # Generate a SESSION_SECRET: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 
-# 3. Push schema to your database
-npm run db:push
+# 3. Apply the schema migrations
+npm run db:migrate
 
 # 4. Seed the four demo users
 npm run db:seed
@@ -130,9 +130,9 @@ runtime). Hybrid setup the project was built for:
 3. **Set environment variables** in the Vercel project:
    - `DATABASE_URL` = your Neon pooled connection string
    - `SESSION_SECRET` = `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
-4. **Push the schema** locally against the production database:
+4. **Apply the schema** locally against the production database:
    ```bash
-   DATABASE_URL="<your-neon-url>" npm run db:push
+   DATABASE_URL="<your-neon-url>" npm run db:migrate
    DATABASE_URL="<your-neon-url>" npm run db:seed
    ```
 5. **Deploy** — Vercel runs `npm run build`. The adapter emits
@@ -153,9 +153,10 @@ runtime). Hybrid setup the project was built for:
 | `npm run preview`     | Preview the production build locally.                     |
 | `npm run check`       | `svelte-kit sync` + `svelte-check` (full typecheck).      |
 | `npm test`            | Vitest run (35 tests across import / sanitize / perms).   |
-| `npm run db:push`     | Apply Drizzle schema to the database.                     |
+| `npm run db:migrate`  | Apply versioned SQL migrations from `drizzle/`.           |
 | `npm run db:seed`     | Insert the four demo users (idempotent).                  |
-| `npm run db:generate` | Generate a SQL migration from schema changes.             |
+| `npm run db:generate` | Generate a new SQL migration from schema changes.         |
+| `npm run db:push`     | (Drizzle's interactive push — prefer `db:migrate`.)       |
 | `npm run fixtures:gen`| Rebuild `tests/fixtures/sample.docx` from XML.            |
 
 ---
