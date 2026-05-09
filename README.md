@@ -22,11 +22,9 @@ project leans into:
 
 ## Live URL
 
-After the deploy step below, paste the URL here and into `SUBMISSION.md`.
+**https://scribbly-ten.vercel.app**
 
-```
-TBD — populated post-deploy
-```
+Hosted on Vercel, backed by a Neon Postgres database.
 
 ## Demo accounts
 

@@ -74,7 +74,7 @@ Run with `npm test`.
 | Schema push              | `npm run db:push`                                               |
 | Seed script              | `npm run db:seed` (4 demo users, idempotent)                    |
 | Build verified locally   | Yes (`npm run build` produces `.vercel/output/`)                |
-| Live URL                 | **TBD** — populated post-deploy                                 |
+| Live URL                 | **https://scribbly-ten.vercel.app**                              |
 
 Deployment uses the **hybrid** model the project was scoped for: you (the
 reviewer) provide a Neon `DATABASE_URL` and a Vercel project link; I push
