@@ -1,0 +1,5 @@
+Plain text fixture
+Second line with <unsafe> characters & symbols
+Third line
+
+A line after a blank one.

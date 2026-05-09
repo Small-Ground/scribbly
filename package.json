@@ -1,0 +1,49 @@
+{
+  "name": "scribbly",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Small full-stack collaborative document app: rich-text editing, file import, sharing.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx src/lib/server/db/seed.ts",
+    "fixtures:gen": "tsx scripts/build-docx-fixture.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "@tiptap/core": "^2.10.3",
+    "@tiptap/extension-underline": "^2.10.3",
+    "@tiptap/pm": "^2.10.3",
+    "@tiptap/starter-kit": "^2.10.3",
+    "drizzle-orm": "^0.36.4",
+    "mammoth": "^1.8.0",
+    "marked": "^15.0.3",
+    "sanitize-html": "^2.13.1"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^5.5.2",
+    "@sveltejs/kit": "^2.10.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.1",
+    "@types/node": "^22.10.1",
+    "@types/sanitize-html": "^2.13.0",
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.28.1",
+    "jszip": "^3.10.1",
+    "svelte": "^5.2.7",
+    "svelte-check": "^4.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.6"
+  }
+}
