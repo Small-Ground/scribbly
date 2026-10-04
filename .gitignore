@@ -16,3 +16,6 @@ coverage
 
 # Restricted-identifier patterns (local only — never commit)
 .githooks/.blocked
+
+# Local Claude project instructions (machine-specific @import — local only, never commit)
+CLAUDE.md
