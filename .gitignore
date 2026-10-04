@@ -13,3 +13,6 @@ dist
 coverage
 
 .vercel
+
+# Restricted-identifier patterns (local only — never commit)
+.githooks/.blocked
